@@ -18,5 +18,5 @@ public class PruebaEntity {
     private Long id;
     private int idEstudiante;
     private int puntaje;
-    private String fecha;
+    private String fecha;//dd-mm-yyyy
 }

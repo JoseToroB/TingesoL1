@@ -20,7 +20,8 @@ public class CuotaEntity {
     private int cantidadCuota;//cantidad de cuotas       3
     private float montoOriginal;
     private float montoApagar;
-    private String fechaPago;
+    private String fechaPago;//dd-mm-yyyy
     private int estaAtrasada;
     private int estaPagado;
+    private int rebajada;//indica si ya se aplico su dcto correspondiente
 }

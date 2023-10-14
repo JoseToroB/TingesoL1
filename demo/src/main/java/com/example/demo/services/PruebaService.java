@@ -66,8 +66,7 @@ public class PruebaService {
     public void borrarTodo(){
         pruebaRepository.deleteAll();
     }
-    public ArrayList<PruebaEntity>obtenerPruebasEstudiante ( int idEstudiante){
-        ArrayList<PruebaEntity> pruebas = pruebaRepository.findAllByIdEstudiante(idEstudiante);
-        return pruebas;
+    public ArrayList<PruebaEntity>obtenerPruebasEstudiante (int idEstudiante){
+        return pruebaRepository.findAllByIdEstudiante(idEstudiante);
     }
 }

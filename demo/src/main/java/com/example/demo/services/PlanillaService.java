@@ -18,4 +18,8 @@ public class PlanillaService {
     public void borrarTodo() {
         planillaRepository.deleteAll();
     }
+    public ArrayList<PlanillaEntity> obtenerPlanillasEstudiante(int idEstudiante){
+        ArrayList<PlanillaEntity> planillas = planillaRepository.findAllByIdEstudiante(idEstudiante);
+        return planillas;
+    }
 }

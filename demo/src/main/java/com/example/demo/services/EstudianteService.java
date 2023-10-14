@@ -18,4 +18,10 @@ public class EstudianteService {
     public void borrarTodo(){
         estudianteRepository.deleteAll();
     }
+    public String obtenerNombreEstudiante(long id){
+        return estudianteRepository.findById(id).getNombre();
+    }
+    public String obtenerRutEstudiante(long id){
+        return estudianteRepository.findById(id).getRut();
+    }
 }

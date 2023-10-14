@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>calcular planilla</title>
 </head>
 <body>
+<div th:replace="navbar.html"></div>
+<form id="miFormulario" action="#" method="get">
+    <label for="idEstudiante">idEstudiante:</label>
+    <input type="number" id="idEstudiante" name="idEstudiante"><br>
+    <button type="button" onclick="redireccionarCrearPlanilla()">crearPlanilla con idEstudiante</button>
+</form>
+
+<script>
+    function redireccionarCrearPlanilla() {
+        var idEstudiante = document.getElementById('idEstudiante').value;
+        if (idEstudiante) {
+            // Redirigir a la URL /calcularPlanillaEstudiante/{idEstudiante}
+            window.location.href = '/calcularPlanillaEstudiante/' + idEstudiante;
+        } else {
+            alert('Por favor, ingresa un valor para idEstudiante.');
+        }
+    }
+</script>
 <!---
     solicitar id estudiante
     enviar a planilla la id
