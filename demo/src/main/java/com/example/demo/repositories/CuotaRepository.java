@@ -9,5 +9,6 @@ import java.util.ArrayList;
 public interface CuotaRepository extends CrudRepository<CuotaEntity,Long> {
     public ArrayList<CuotaEntity> findAllByIdEstudiante(int idEstudiante);
     public CuotaEntity findById(long id);
+    public CuotaEntity findByIdEstudiante(int id);
 
 }
