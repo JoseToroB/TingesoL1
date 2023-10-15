@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Crear Proveedor</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div th:replace="navbar.html"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-5">
+      <h1>Crear Cuota</h1>
+    </div>
+    <div class="col-12">
+      <form th:action="@{/crearCuota}" method="post" th:object="${cuota}">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <lavel > idEstudiante </lavel>
+            <input th:field="*{idEstudiante}" th:value="*{idEstudiante}"type="number" class="form-control" placeholder="idEstudiante" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <lavel > numeroCuota </lavel>
+            <input th:field="*{numeroCuota}" th:value="*{numeroCuota}"type="number" class="form-control" placeholder="numeroCuota" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <lavel > cantidadCuota </lavel>
+            <input th:field="*{cantidadCuota}" th:value="*{cantidadCuota}"type="number" class="form-control" placeholder="cantidadCuota" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <lavel > montoOriginal</lavel>
+            <input th:field="*{montoOriginal}" th:value="*{montoOriginal}"type="number" class="form-control" placeholder="montoOriginal" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <lavel > montoApagar</lavel>
+            <input th:field="*{montoApagar}" th:value="*{montoApagar}"type="number" class="form-control" placeholder="montoApagar" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <lavel > fechaPago</lavel>
+            <input th:field="*{fechaPago}" th:value="*{fechaPago}"type="text" class="form-control" placeholder="fechaPago" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <lavel > estaAtrasada</lavel>
+            <input th:field="*{estaAtrasada}" th:value="*{estaAtrasada}"type="number" class="form-control" placeholder="estaAtrasada" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <lavel > estaPagado</lavel>
+            <input th:field="*{estaPagado}" th:value="*{estaPagado}"type="number" class="form-control" placeholder="estaPagado" required>
+          </div>
+          <div class="form-group col-md-6">
+            <lavel > rebajada</lavel>
+            <input th:field="*{rebajada}" th:value="*{rebajada}"type="number" class="form-control" placeholder="rebajada" required>
+          </div>
+
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary" th:disabled="${#fields.hasErrors()}">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
