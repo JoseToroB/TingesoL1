@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PlanillaEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.example.demo.entities</a> &gt; <span class="el_source">PlanillaEntity.java</span></div><h1>PlanillaEntity.java</h1><pre class="source lang-java linenums">package com.example.demo.entities;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = &quot;planilla&quot;)
+<span class="pc bnc" id="L11" title="All 72 branches missed.">@Data</span>
+<span class="fc" id="L12">@NoArgsConstructor</span>
+<span class="nc" id="L13">@AllArgsConstructor</span>
+public class PlanillaEntity {
+    /*planilla de cuotas*/
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true, nullable = false)
+<span class="fc" id="L19">    private Long id;</span>
+<span class="nc" id="L20">    private int idEstudiante;</span>
+<span class="nc" id="L21">    private float cantidadTotal;</span>
+<span class="fc" id="L22">    private int cuotasApagar;</span>
+<span class="nc" id="L23">    private String fechaCreacionPlanilla;//en caso de tener mas planillas, para saber cuando se genero cada una</span>
+    /* esto se solicita en la planilla a mostrar en HU7 */
+<span class="nc" id="L25">    private String nombreEstudiante;//funcion creada</span>
+<span class="nc" id="L26">    private String rutEstudiante;//funcion creada</span>
+<span class="nc" id="L27">    private int cantidadPruebasRendidas;//cant prueba</span>
+<span class="nc" id="L28">    private int promedioPruebas;//promedio</span>
+<span class="nc" id="L29">    private String tipoPago;//if cantCuotas=1 es contado si es mas de 1 es cuotas</span>
+<span class="nc" id="L30">    private String fechaUltimoPago;//fechaUltimopago</span>
+<span class="nc" id="L31">    private int cuotasTotal; //cantCuotas</span>
+<span class="nc" id="L32">    private float cantidadPagada; // Monto total pagado</span>
+<span class="fc" id="L33">    private int cuotasPagadas; //pagadas</span>
+<span class="fc" id="L34">    private float cantidadApagar; //montoTotal-montoTotalpagado</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>indexController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.example.demo.controllers</a> &gt; <span class="el_source">indexController.java</span></div><h1>indexController.java</h1><pre class="source lang-java linenums">package com.example.demo.controllers;
+import com.example.demo.entities.CuotaEntity;
+import com.example.demo.entities.EstudianteEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping
+<span class="fc" id="L12">public class indexController {</span>
+    @GetMapping(&quot;/&quot;)
+    public String main(){
+<span class="nc" id="L15">        return &quot;index&quot;;</span>
+    }
+
+    @GetMapping(&quot;/estudiante&quot;)
+    public String estudiante(EstudianteEntity estudiante, Model model){
+<span class="nc" id="L20">        model.addAttribute(&quot;estudiante&quot;,estudiante);</span>
+<span class="nc" id="L21">        return &quot;crearEstudiante&quot;;</span>
+    }
+    @GetMapping(&quot;/cuotas&quot;)
+    public String cuotas(CuotaEntity cuotas, Model model){
+<span class="nc" id="L25">        model.addAttribute(&quot;cuota&quot;,cuotas);</span>
+<span class="nc" id="L26">        return &quot;crearCuota&quot;;</span>
+    }
+    @GetMapping(&quot;/listarCuotasPorAlumno&quot;)
+    public String listarCuotasAlumno(){
+<span class="nc" id="L30">        return &quot;listaCuotas&quot;;</span>
+    }
+
+    @GetMapping (&quot;/registrarPagoCuota&quot;)
+<span class="nc" id="L34">    public String registrarPagoCuota(){return &quot;pagoCuota&quot;; }</span>
+
+    @GetMapping(&quot;/cargarExcel&quot;)
+<span class="nc" id="L37">    public String cargarExcelNotas(){ return &quot;cargarNotas&quot;;}</span>
+
+    @GetMapping(&quot;/calcularPlanillaPagos&quot;)
+<span class="nc" id="L40">    public String calcularPlanillaPago(){return &quot;calcularPlanilla&quot;;}</span>
+
+    @GetMapping(&quot;/calcularReporte&quot;)
+<span class="nc" id="L43">    public String calcularReporte(){return &quot;calcularReporte&quot;;}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

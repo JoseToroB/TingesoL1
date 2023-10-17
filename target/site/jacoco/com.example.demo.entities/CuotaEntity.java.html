@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CuotaEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.example.demo.entities</a> &gt; <span class="el_source">CuotaEntity.java</span></div><h1>CuotaEntity.java</h1><pre class="source lang-java linenums">package com.example.demo.entities;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = &quot;cuota&quot;)
+<span class="pc bnc" id="L10" title="All 38 branches missed.">@Data</span>
+<span class="fc" id="L11">@NoArgsConstructor</span>
+<span class="nc" id="L12">@AllArgsConstructor</span>
+public class CuotaEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true, nullable = false)
+<span class="fc" id="L17">    private Long id;</span>
+<span class="nc" id="L18">    private int idEstudiante;</span>
+<span class="nc" id="L19">    private int numeroCuota;//numero de esta cuota     1 de</span>
+<span class="nc" id="L20">    private int cantidadCuota;//cantidad de cuotas       3</span>
+<span class="nc" id="L21">    private float montoOriginal;</span>
+<span class="fc" id="L22">    private float montoApagar;</span>
+<span class="fc" id="L23">    private String fechaPago;//dd-mm-yyyy</span>
+<span class="fc" id="L24">    private int estaAtrasada;</span>
+<span class="fc" id="L25">    private int estaPagado;</span>
+<span class="nc" id="L26">    private int rebajada;//indica si ya se aplico su dcto correspondiente</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

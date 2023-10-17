@@ -18,11 +18,12 @@ public class IndexService {
     PruebaService pruebaService;
     @Autowired
     PlanillaService planillaService;
-    public void vaciarBD(){
+    public int vaciarBD(){
         cuotaService.borrarTodo();
         estudianteService.borrarTodo();
         planillaService.borrarTodo();
         pruebaService.borrarTodo();
+        return 1;
     }
     public long poblarBD(){
         EstudianteEntity e= new EstudianteEntity();
