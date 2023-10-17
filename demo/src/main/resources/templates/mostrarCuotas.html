@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de Cuota</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+<div th:replace="navbar.html"></div>
+
+<div id="cuotaDetails">
+    <ul th:each="cuota : ${cuotas}">
+        <li>ID: <span th:text="${cuota.id}"></span></li>
+        <li>ID Estudiante: <span th:text="${cuota.idEstudiante}"></span></li>
+        <li>Número de Cuota: <span th:text="${cuota.numeroCuota}"></span></li>
+        <li>Cantidad de Cuota: <span th:text="${cuota.cantidadCuota}"></span></li>
+        <li>Monto Original: <span th:text="${cuota.montoOriginal}"></span></li>
+        <li>Monto a Pagar: <span th:text="${cuota.montoApagar}"></span></li>
+        <li>Fecha de Pago: <span th:text="${cuota.fechaPago}"></span></li>
+        <li>Está Atrasada: <span th:text="${cuota.estaAtrasada}"></span></li>
+        <li>Está Pagado: <span th:text="${cuota.estaPagado}"></span></li>
+        <li>Rebajada: <span th:text="${cuota.rebajada}"></span></li>
+
+        <!-- Otros detalles de la cuota -->
+    </ul>
+</div>
+
+
+</body>
+</html>
