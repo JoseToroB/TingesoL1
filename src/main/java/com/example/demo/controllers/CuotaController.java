@@ -25,8 +25,10 @@ public class CuotaController {
     }
 
    @GetMapping("/listaCuotas/{id}")
-    public ResponseEntity<List<CuotaEntity>> getUsers(@PathVariable int id) {
-        return new ResponseEntity<>(cuotaService.obtenerCuotasEstudiante(id), HttpStatus.OK);
+    public String getUsers(@PathVariable int id,Model model) {
+        List<CuotaEntity>cuotas = cuotaService.obtenerCuotasEstudiante(id);
+        model.addAttribute("cuotas",cuotas);
+        return "mostrarCuotas";
     }
 
     @GetMapping("/borrarCuota")

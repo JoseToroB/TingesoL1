@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+<div th:replace="navbar.html"></div>
+
+<div id="planillaDetails">
+    <ul th:each="planilla : ${planillas}">
+        <li>ID: <span th:text="${planilla.id}"></span></li>
+        <li>ID Estudiante: <span th:text="${planilla.idEstudiante}"></span></li>
+        <li>Cantidad Total: <span th:text="${planilla.cantidadTotal}"></span></li>
+        <li>Cuotas a Pagar: <span th:text="${planilla.cuotasApagar}"></span></li>
+        <li>Fecha Creación Planilla: <span th:text="${planilla.fechaCreacionPlanilla}"></span></li>
+        <li>Nombre Estudiante: <span th:text="${planilla.nombreEstudiante}"></span></li>
+        <li>RUT Estudiante: <span th:text="${planilla.rutEstudiante}"></span></li>
+        <li>Cantidad Pruebas Rendidas: <span th:text="${planilla.cantidadPruebasRendidas}"></span></li>
+        <li>Promedio Pruebas: <span th:text="${planilla.promedioPruebas}"></span></li>
+        <li>Tipo Pago: <span th:text="${planilla.tipoPago}"></span></li>
+        <li>Fecha Último Pago: <span th:text="${planilla.fechaUltimoPago}"></span></li>
+        <li>Cuotas Total: <span th:text="${planilla.cuotasTotal}"></span></li>
+        <li>Cantidad Pagada: <span th:text="${planilla.cantidadPagada}"></span></li>
+        <li>Cuotas Pagadas: <span th:text="${planilla.cuotasPagadas}"></span></li>
+        <li>Cantidad a Pagar: <span th:text="${planilla.cantidadApagar}"></span></li>
+
+        <!-- Otros detalles de la planilla -->
+    </ul>
+</div>
+
+
+</body>
+</html>

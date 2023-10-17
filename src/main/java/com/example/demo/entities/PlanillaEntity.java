@@ -20,17 +20,16 @@ public class PlanillaEntity {
     private int idEstudiante;
     private float cantidadTotal;
     private int cuotasApagar;
-    private String fechaCreacionPlanilla;//en caso de tener mas planillas, para saber cuando se genero cada una
-    /* esto se solicita en la planilla a mostrar en HU7 */
-    private String nombreEstudiante;//funcion creada
-    private String rutEstudiante;//funcion creada
-    private int cantidadPruebasRendidas;//cant prueba
-    private int promedioPruebas;//promedio
-    private String tipoPago;//if cantCuotas=1 es contado si es mas de 1 es cuotas
-    private String fechaUltimoPago;//fechaUltimopago
-    private int cuotasTotal; //cantCuotas
-    private float cantidadPagada; // Monto total pagado
-    private int cuotasPagadas; //pagadas
-    private float cantidadApagar; //montoTotal-montoTotalpagado
+    private String fechaCreacionPlanilla;
+    private String nombreEstudiante;
+    private String rutEstudiante;
+    private int cantidadPruebasRendidas;
+    private int promedioPruebas;
+    private String tipoPago;
+    private String fechaUltimoPago;
+    private int cuotasTotal;
+    private float cantidadPagada;
+    private int cuotasPagadas;
+    private float cantidadApagar;
 
 }
